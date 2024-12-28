@@ -1,6 +1,5 @@
 package com.hfad.tasks
 
-//import androidx.lifecycle.Transformations
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.map
 import androidx.lifecycle.viewModelScope
@@ -11,11 +10,8 @@ class TasksViewModel(val dao: TaskDao) : ViewModel() {
     private val tasks = dao.getAll()
 
     val tasksString = tasks.map { tasks ->
-        formatTasks(tasks) }
-
-//    val tasksString = Transformations.map(tasks) { tasks ->
-//        formatTasks(tasks)
-//    }
+        formatTasks(tasks)
+    }
 
     fun addTask() {
         viewModelScope.launch {
