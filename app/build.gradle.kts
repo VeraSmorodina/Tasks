@@ -42,6 +42,7 @@ android {
 dependencies {
 //    val lifecycle_version = "2.3.1"
 //    val room_version = "2.3.0"
+    implementation (libs.androidx.recyclerview)
     implementation (libs.androidx.lifecycle.viewmodel.ktx)
     implementation (libs.androidx.lifecycle.livedata.ktx)
     implementation (libs.androidx.room.runtime)
