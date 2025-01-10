@@ -29,7 +29,7 @@ class TasksFragment : Fragment() {
         binding.viewModel = viewModel
         binding.lifecycleOwner = viewLifecycleOwner
 
-        val adapter = TaskItemAdapter() { taskId ->
+        val adapter = TaskItemAdapter{ taskId ->
             Toast.makeText(context, "Clicked task $taskId", Toast.LENGTH_SHORT).show()
         }
         binding.tasksList.adapter = adapter
