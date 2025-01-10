@@ -1,6 +1,6 @@
 [versions]
 agp = "8.6.1"
-cardview = "1.0.0"
+androidxCardview = "1.0.0"
 kotlin = "1.9.0"
 coreKtx = "1.15.0"
 junit = "4.13.2"
@@ -15,7 +15,7 @@ recyclerview = "1.3.2"
 roomRuntime = "2.6.1"
 
 [libraries]
-androidx-cardview = { module = "androidx.cardview:cardview", version.ref = "cardview" }
+androidx-cardview = { module = "androidx.cardview:cardview", version.ref = "androidxCardview" }
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
 androidx-lifecycle-livedata-ktx = { module = "androidx.lifecycle:lifecycle-livedata-ktx", version.ref = "lifecycleViewmodelKtx" }
 androidx-lifecycle-viewmodel-ktx = { module = "androidx.lifecycle:lifecycle-viewmodel-ktx", version.ref = "lifecycleViewmodelKtx" }
