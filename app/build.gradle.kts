@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
+    id("androidx.navigation.safeargs")
     id ("kotlin-kapt")
 }
 
@@ -49,6 +50,13 @@ dependencies {
     implementation (libs.androidx.room.ktx)
     kapt (libs.androidx.room.compiler)
     implementation (libs.androidx.cardview)
+
+
+    implementation(libs.androidx.navigation.fragment.ktx)
+    implementation(libs.androidx.navigation.ui.ktx)
+//    val nav_version = "2.3.5"
+//    classpath("androidx.navigation:navigation-safe-args-gradle-plug-in:$nav_version")
+
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
