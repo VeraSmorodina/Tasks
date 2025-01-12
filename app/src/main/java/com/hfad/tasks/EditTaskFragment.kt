@@ -25,6 +25,19 @@ class EditTaskFragment : Fragment() {
         val taskId = EditTaskFragmentArgs.fromBundle(requireArguments()).taskId
         val application = requireNotNull(this.activity).application
         val dao = TaskDatabase.getInstance(application).taskDao
+
+        val viewModelFactory = EditTaskViewModelFactory(taskId, dao)
+        val viewModel = ViewModelProvider(this, viewModelFactory)
+            .get(EditTaskViewModel::class.java)
+        binding.viewModel = viewModel
+        binding.lifecycleOwner = viewLifecycleOwner
+        viewModel.navigateToList.observe(viewLifecycleOwner, Observer { navigate ->
+            if (navigate) {
+                view.findNavController()
+                    .navigate(R.id.action_editTaskFragment_to_tasksFragment)
+                viewModel.onNavigatedToList()
+            }
+        })
         return view
     }
 
